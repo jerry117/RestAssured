@@ -4,6 +4,9 @@ import com.google.common.base.Utf8;
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import java.io.UnsupportedEncodingException;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
@@ -46,11 +49,11 @@ public class TesterHomeTest {
 //
 //    }
     @Test
-    public void testTesterHomeJsonSingle(){
+    public void testTesterHomeJsonSingle() throws UnsupportedEncodingException {
         given().when().get("https://testerhome.com/api/v3/topics/10254.json").prettyPeek()
                 .then()
                 .statusCode(200)
-                .body("topic.title", equalTo("优质招聘汇总"))
+                .body("topic.title", equalTo("优质招聘汇总".getBytes("UTF-8")))
                 ;
 
 
