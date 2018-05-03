@@ -15,18 +15,18 @@ public class TesterHomeTest {
 
     }
 
-//    @Test
-//    public void testHtml(){
-//
-//        given()
-//                .queryParam("q","appium")
-//                .when()
-//                .get("https://testerhome.com/search").prettyPeek()
-//                .then()
-//                        .statusCode(200)
-//                        .body("html.head.title", equalTo("appium · 搜索结果 · TesterHome"));
-//
-//    }
+    @Test
+    public void testHtml(){
+
+        given()
+                .queryParam("q","appium")
+                .when()
+                .get("https://testerhome.com/search").prettyPeek()
+                .then()
+                        .statusCode(200)
+                        .body("html.head.title", equalTo("appium · 搜索结果 · TesterHome"));
+
+    }
 //    @Test
 //    public void testTesterHomeJson(){
 //        given()
@@ -44,17 +44,17 @@ public class TesterHomeTest {
 //
 //
 //    }
-//    @Test
-//    public void testTesterHomeJsonSingle(){
-//        given().when().get("https://testerhome.com/api/v3/topics/10254.json").prettyPeek()
-//                .then()
-//                .statusCode(200)
-//                .body("topic.title", equalTo("优质招聘汇总"))
-//                ;
-//
-//
-//
-//    }
+    @Test
+    public void testTesterHomeJsonSingle(){
+        given().when().get("https://testerhome.com/api/v3/topics/10254.json").prettyPeek()
+                .then()
+                .statusCode(200)
+                .body("topic.title", equalTo("优质招聘汇总"))
+                ;
+
+
+
+    }
 
 //    @Test
 //    public void testBanggoodSearch(){
