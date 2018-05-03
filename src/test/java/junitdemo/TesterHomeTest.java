@@ -1,5 +1,6 @@
 package junitdemo;
 
+import com.google.common.base.Utf8;
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
 import org.junit.Test;
