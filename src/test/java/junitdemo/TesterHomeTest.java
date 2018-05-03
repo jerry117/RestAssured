@@ -49,12 +49,13 @@ public class TesterHomeTest {
 //
 //    }
     @Test
-    public void testTesterHomeJsonSingle() throws UnsupportedEncodingException {
+    public void testTesterHomeJsonSingle(){
         given().when().get("https://testerhome.com/api/v3/topics/10254.json").prettyPeek()
                 .then()
                 .statusCode(200)
-                .body("topic.title", equalTo("优质招聘汇总".getBytes("UTF-8")))
+                .body("topic.title", equalTo("优质招聘汇总"))
                 ;
+
 
 
 
