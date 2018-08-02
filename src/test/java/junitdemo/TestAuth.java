@@ -11,10 +11,14 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 public class TestAuth {
-//    @BeforeClass
-//    public static void setup(){
+    @BeforeClass
+    public static void setup(){
+          useRelaxedHTTPSValidation();
 //        RestAssured.proxy("192.168.163.3", 8081);
-//    }
+    }
+
+
+
 
     @Test
     public void testAuthBasic(){
@@ -54,6 +58,17 @@ public class TestAuth {
         .then()
                 .statusCode(200);
 
+    }
+
+
+    @Test
+    public void testAuth2(){
+        String token = "xxx";
+        given().auth().oauth2(token)
+        .when()
+                .get("https://api.github.com/user")
+                .prettyPeek()
+        .then().statusCode(200);
     }
 
 }
