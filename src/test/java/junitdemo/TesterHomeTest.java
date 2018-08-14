@@ -14,7 +14,7 @@ public class TesterHomeTest {
     @BeforeClass
     public static void setup(){
         useRelaxedHTTPSValidation();
-//        RestAssured.baseURI="https:www.baidu.com";
+//        RestAssured.baseURI="https://www.baidu.com";
 //        RestAssured.proxy("127.0.0.1",8080);
 
     }
