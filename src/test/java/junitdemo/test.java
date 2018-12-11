@@ -2,10 +2,16 @@ package junitdemo;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
+
+import java.awt.geom.RectangularShape;
+import java.util.List;
 
 import static io.restassured.RestAssured.*;
 import static io.restassured.config.XmlConfig.xmlConfig;
@@ -13,6 +19,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
+@RunWith(Parameterized.class)
 public class test {
     @BeforeTest
     public static void setup1(){
@@ -118,8 +125,53 @@ public class test {
             assertEquals(kd,1);
 
     }
+
+    @Test
+    public void testsolr(){
+        given()
+                .when()
+                .get("https://mbeta5.newchic.com/en/pwa/category/categoryList/?zmkm=1&currency_cdn=USD&default_rule_country_cdn=223&cat_id=3603&brand_id=&page=3&pagesize=18&is_logo=0&ship=0&searchtag=&size=&sort=1&keywords=&pfrom=&pto=&type=").prettyPeek()
+                .then().statusCode(200).body("result.page",equalTo(3));
+
+    }
+
+    @Test
+    public void testsolrjsonscheme(){
+//    @TODO 要把返回的数据转变成json才可以做结构校验
+        get("https://mbeta5.newchic.com/en/pwa/category/categoryList/?zmkm=1&currency_cdn=USD&default_rule_country_cdn=223&cat_id=3603&brand_id=&page=3&pagesize=18&is_logo=0&ship=0&searchtag=&size=&sort=1&keywords=&pfrom=&pto=&type=").prettyPeek()
+                .then().assertThat().body(matchesJsonSchemaInClasspath("solr.json"));
+
+    }
+
+
+    @Test
+    public void testerhome1(){
+        RestAssured.baseURI = "https://www.baidu.com";
+
+        given().when().get("/").prettyPeek()
+
+                .then().statusCode(200);
+
+    }
+
+
+    @Parameterized.Parameters(name = "{0}vs{1}")
+    public static Integer[][] data(){
+        return new Integer[][]{
+                {0,0 },{1,1},{2,3}
+        };
+    }
+    @Parameterized.Parameter
+    public int first;
+    @Parameterized.Parameter(1)
+    public int second;
+
+    @Test
+    public void testDemo(){
+        assertThat(first,equalTo(second));
+    }
+
+
+
 }
-
-
-
 
