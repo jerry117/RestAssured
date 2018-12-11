@@ -37,6 +37,7 @@ public class SubClass extends BaseClass {
 //        系统总是试图访问编译时类所定义的属性，而不是运行时类所定义的属性。
         System.out.println(ploymophicBc.book);
 
+
         ploymophicBc.base();
         ploymophicBc.test();
 
@@ -44,8 +45,12 @@ public class SubClass extends BaseClass {
 //        多态，需要强转才能编译通过。
 //        ploymophicBc.sub();
 
-//        ((SubClass) ploymophicBc).sub();
 
+//        判断能否转换，保证健壮性。
+        if (ploymophicBc instanceof SubClass){
+            SubClass pp = (SubClass)ploymophicBc;
+            pp.sub();
+        }
 
     }
 
