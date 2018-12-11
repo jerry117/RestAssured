@@ -1,0 +1,829 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "result",
+    "code",
+    "message"
+  ],
+  "properties": {
+    "result": {
+      "$id": "#/properties/result",
+      "type": "object",
+      "title": "The Result Schema",
+      "required": [
+        "show_logo",
+        "logo_title",
+        "totalPage",
+        "page",
+        "list",
+        "categoryList",
+        "cat_name",
+        "cateFilters",
+        "sortList",
+        "fbParm",
+        "GAParams",
+        "criteo",
+        "NetAffiliationRetargeting",
+        "mainAdsRetag"
+      ],
+      "properties": {
+        "show_logo": {
+          "$id": "#/properties/result/properties/show_logo",
+          "type": "boolean",
+          "title": "The Show_logo Schema",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "logo_title": {
+          "$id": "#/properties/result/properties/logo_title",
+          "type": "string",
+          "title": "The Logo_title Schema",
+          "default": "",
+          "examples": [
+            ""
+          ],
+          "pattern": "^(.*)$"
+        },
+        "totalPage": {
+          "$id": "#/properties/result/properties/totalPage",
+          "type": "integer",
+          "title": "The Totalpage Schema",
+          "default": 0,
+          "examples": [
+            99
+          ]
+        },
+        "page": {
+          "$id": "#/properties/result/properties/page",
+          "type": "integer",
+          "title": "The Page Schema",
+          "default": 0,
+          "examples": [
+            3
+          ]
+        },
+        "list": {
+          "$id": "#/properties/result/properties/list",
+          "type": "array",
+          "title": "The List Schema",
+          "items": {
+            "$id": "#/properties/result/properties/list/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "products_id",
+              "products_name",
+              "image_url",
+              "url",
+              "products_price",
+              "format_products_price",
+              "final_price",
+              "format_final_price",
+              "discount",
+              "in_wish",
+              "wishlist",
+              "isNewarrival",
+              "clearStock",
+              "isFreeShipping",
+              "is_deals",
+              "logo_pro_image"
+            ],
+            "properties": {
+              "products_id": {
+                "$id": "#/properties/result/properties/list/items/properties/products_id",
+                "type": "string",
+                "title": "The Products_id Schema",
+                "default": "",
+                "examples": [
+                  "1157479"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "products_name": {
+                "$id": "#/properties/result/properties/list/items/properties/products_name",
+                "type": "string",
+                "title": "The Products_name Schema",
+                "default": "",
+                "examples": [
+                  "Women Vintage Printed Dresses"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "image_url": {
+                "$id": "#/properties/result/properties/list/items/properties/image_url",
+                "type": "string",
+                "title": "The Image_url Schema",
+                "default": "",
+                "examples": [
+                  "https://img.newchic.com/thumb/view/oaupload/newchic/images/E5/A6/df165ed5-d543-42ad-b62d-c6b39619d58a.jpg"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "url": {
+                "$id": "#/properties/result/properties/list/items/properties/url",
+                "type": "string",
+                "title": "The Url Schema",
+                "default": "",
+                "examples": [
+                  "https://mbeta5.newchic.com/vintage-dresses-3664/p-1157479.html"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "products_price": {
+                "$id": "#/properties/result/properties/list/items/properties/products_price",
+                "type": "number",
+                "title": "The Products_price Schema",
+                "default": 0.0,
+                "examples": [
+                  76.5
+                ]
+              },
+              "format_products_price": {
+                "$id": "#/properties/result/properties/list/items/properties/format_products_price",
+                "type": "string",
+                "title": "The Format_products_price Schema",
+                "default": "",
+                "examples": [
+                  "US$76.50"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "final_price": {
+                "$id": "#/properties/result/properties/list/items/properties/final_price",
+                "type": "number",
+                "title": "The Final_price Schema",
+                "default": 0.0,
+                "examples": [
+                  38.99
+                ]
+              },
+              "format_final_price": {
+                "$id": "#/properties/result/properties/list/items/properties/format_final_price",
+                "type": "string",
+                "title": "The Format_final_price Schema",
+                "default": "",
+                "examples": [
+                  "US$38.99"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "discount": {
+                "$id": "#/properties/result/properties/list/items/properties/discount",
+                "type": "integer",
+                "title": "The Discount Schema",
+                "default": 0,
+                "examples": [
+                  49
+                ]
+              },
+              "in_wish": {
+                "$id": "#/properties/result/properties/list/items/properties/in_wish",
+                "type": "boolean",
+                "title": "The In_wish Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "wishlist": {
+                "$id": "#/properties/result/properties/list/items/properties/wishlist",
+                "type": "boolean",
+                "title": "The Wishlist Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isNewarrival": {
+                "$id": "#/properties/result/properties/list/items/properties/isNewarrival",
+                "type": "boolean",
+                "title": "The Isnewarrival Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "clearStock": {
+                "$id": "#/properties/result/properties/list/items/properties/clearStock",
+                "type": "string",
+                "title": "The Clearstock Schema",
+                "default": "",
+                "examples": [
+                  "0"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isFreeShipping": {
+                "$id": "#/properties/result/properties/list/items/properties/isFreeShipping",
+                "type": "boolean",
+                "title": "The Isfreeshipping Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "is_deals": {
+                "$id": "#/properties/result/properties/list/items/properties/is_deals",
+                "type": "integer",
+                "title": "The Is_deals Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "logo_pro_image": {
+                "$id": "#/properties/result/properties/list/items/properties/logo_pro_image",
+                "type": "string",
+                "title": "The Logo_pro_image Schema",
+                "default": "",
+                "examples": [
+                  ""
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        },
+        "categoryList": {
+          "$id": "#/properties/result/properties/categoryList",
+          "type": "array",
+          "title": "The Categorylist Schema",
+          "items": {
+            "$id": "#/properties/result/properties/categoryList/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "categories_id",
+              "categories_name",
+              "language_id",
+              "parent_id"
+            ],
+            "properties": {
+              "categories_id": {
+                "$id": "#/properties/result/properties/categoryList/items/properties/categories_id",
+                "type": "string",
+                "title": "The Categories_id Schema",
+                "default": "",
+                "examples": [
+                  "3662"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categories_name": {
+                "$id": "#/properties/result/properties/categoryList/items/properties/categories_name",
+                "type": "string",
+                "title": "The Categories_name Schema",
+                "default": "",
+                "examples": [
+                  "Maxi Dresses"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "language_id": {
+                "$id": "#/properties/result/properties/categoryList/items/properties/language_id",
+                "type": "string",
+                "title": "The Language_id Schema",
+                "default": "",
+                "examples": [
+                  "1"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "parent_id": {
+                "$id": "#/properties/result/properties/categoryList/items/properties/parent_id",
+                "type": "string",
+                "title": "The Parent_id Schema",
+                "default": "",
+                "examples": [
+                  "3603"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        },
+        "cat_name": {
+          "$id": "#/properties/result/properties/cat_name",
+          "type": "string",
+          "title": "The Cat_name Schema",
+          "default": "",
+          "examples": [
+            "Dresses"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "cateFilters": {
+          "$id": "#/properties/result/properties/cateFilters",
+          "type": "array",
+          "title": "The Catefilters Schema",
+          "items": {
+            "$id": "#/properties/result/properties/cateFilters/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "filter_id",
+              "filter_name",
+              "sort_order",
+              "selected",
+              "filter_values"
+            ],
+            "properties": {
+              "filter_id": {
+                "$id": "#/properties/result/properties/cateFilters/items/properties/filter_id",
+                "type": "string",
+                "title": "The Filter_id Schema",
+                "default": "",
+                "examples": [
+                  "1857"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "filter_name": {
+                "$id": "#/properties/result/properties/cateFilters/items/properties/filter_name",
+                "type": "string",
+                "title": "The Filter_name Schema",
+                "default": "",
+                "examples": [
+                  "Color"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sort_order": {
+                "$id": "#/properties/result/properties/cateFilters/items/properties/sort_order",
+                "type": "string",
+                "title": "The Sort_order Schema",
+                "default": "",
+                "examples": [
+                  "1"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "selected": {
+                "$id": "#/properties/result/properties/cateFilters/items/properties/selected",
+                "type": "boolean",
+                "title": "The Selected Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "filter_values": {
+                "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values",
+                "type": "array",
+                "title": "The Filter_values Schema",
+                "items": {
+                  "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items",
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "filter_value_id",
+                    "filter_id",
+                    "filter_value",
+                    "sort_order",
+                    "amount",
+                    "selected",
+                    "url"
+                  ],
+                  "properties": {
+                    "filter_value_id": {
+                      "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items/properties/filter_value_id",
+                      "type": "string",
+                      "title": "The Filter_value_id Schema",
+                      "default": "",
+                      "examples": [
+                        "12177"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "filter_id": {
+                      "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items/properties/filter_id",
+                      "type": "string",
+                      "title": "The Filter_id Schema",
+                      "default": "",
+                      "examples": [
+                        "1857"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "filter_value": {
+                      "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items/properties/filter_value",
+                      "type": "string",
+                      "title": "The Filter_value Schema",
+                      "default": "",
+                      "examples": [
+                        "Black"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "sort_order": {
+                      "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items/properties/sort_order",
+                      "type": "string",
+                      "title": "The Sort_order Schema",
+                      "default": "",
+                      "examples": [
+                        "1"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "amount": {
+                      "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items/properties/amount",
+                      "type": "integer",
+                      "title": "The Amount Schema",
+                      "default": 0,
+                      "examples": [
+                        482
+                      ]
+                    },
+                    "selected": {
+                      "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items/properties/selected",
+                      "type": "boolean",
+                      "title": "The Selected Schema",
+                      "default": false,
+                      "examples": [
+                        false
+                      ]
+                    },
+                    "url": {
+                      "$id": "#/properties/result/properties/cateFilters/items/properties/filter_values/items/properties/url",
+                      "type": "string",
+                      "title": "The Url Schema",
+                      "default": "",
+                      "examples": [
+                        "https://mbeta5.newchic.com/dresses-c-3603/size-/v-12177/free-0/price-0-0/3"
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sortList": {
+          "$id": "#/properties/result/properties/sortList",
+          "type": "array",
+          "title": "The Sortlist Schema",
+          "items": {
+            "$id": "#/properties/result/properties/sortList/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "sortID",
+              "sortName"
+            ],
+            "properties": {
+              "sortID": {
+                "$id": "#/properties/result/properties/sortList/items/properties/sortID",
+                "type": "integer",
+                "title": "The Sortid Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "sortName": {
+                "$id": "#/properties/result/properties/sortList/items/properties/sortName",
+                "type": "string",
+                "title": "The Sortname Schema",
+                "default": "",
+                "examples": [
+                  "Most Popular"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        },
+        "fbParm": {
+          "$id": "#/properties/result/properties/fbParm",
+          "type": "object",
+          "title": "The Fbparm Schema",
+          "required": [
+            "content_name",
+            "content_category",
+            "content_type",
+            "content_ids",
+            "value",
+            "currency",
+            "frist_source",
+            "campaign",
+            "medium"
+          ],
+          "properties": {
+            "content_name": {
+              "$id": "#/properties/result/properties/fbParm/properties/content_name",
+              "type": "string",
+              "title": "The Content_name Schema",
+              "default": "",
+              "examples": [
+                "Ethnic Printed Sleeveless Vintage Dresses"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "content_category": {
+              "$id": "#/properties/result/properties/fbParm/properties/content_category",
+              "type": "string",
+              "title": "The Content_category Schema",
+              "default": "",
+              "examples": [
+                "Women's Clothing > Dresses"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "content_type": {
+              "$id": "#/properties/result/properties/fbParm/properties/content_type",
+              "type": "string",
+              "title": "The Content_type Schema",
+              "default": "",
+              "examples": [
+                "product"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "content_ids": {
+              "$id": "#/properties/result/properties/fbParm/properties/content_ids",
+              "type": "array",
+              "title": "The Content_ids Schema",
+              "items": {
+                "$id": "#/properties/result/properties/fbParm/properties/content_ids/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "1157479-16265-16224US",
+                  "1285109-16265-16223US",
+                  "1151942-16265-16229US"
+                ],
+                "pattern": "^(.*)$"
+              }
+            },
+            "value": {
+              "$id": "#/properties/result/properties/fbParm/properties/value",
+              "type": "number",
+              "title": "The Value Schema",
+              "default": 0.0,
+              "examples": [
+                77.95
+              ]
+            },
+            "currency": {
+              "$id": "#/properties/result/properties/fbParm/properties/currency",
+              "type": "string",
+              "title": "The Currency Schema",
+              "default": "",
+              "examples": [
+                "USD"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "frist_source": {
+              "$id": "#/properties/result/properties/fbParm/properties/frist_source",
+              "type": "string",
+              "title": "The Frist_source Schema",
+              "default": "",
+              "examples": [
+                "direct"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "campaign": {
+              "$id": "#/properties/result/properties/fbParm/properties/campaign",
+              "type": "string",
+              "title": "The Campaign Schema",
+              "default": "",
+              "examples": [
+                "no"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "medium": {
+              "$id": "#/properties/result/properties/fbParm/properties/medium",
+              "type": "string",
+              "title": "The Medium Schema",
+              "default": "",
+              "examples": [
+                ""
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "GAParams": {
+          "$id": "#/properties/result/properties/GAParams",
+          "type": "object",
+          "title": "The Gaparams Schema",
+          "required": [
+            "ecomm_prodid",
+            "ecomm_totalvalue",
+            "ecomm_pagetype",
+            "section",
+            "subsection",
+            "ecomm_pcat",
+            "ecomm_currency",
+            "frist_source",
+            "campaign",
+            "medium"
+          ],
+          "properties": {
+            "ecomm_prodid": {
+              "$id": "#/properties/result/properties/GAParams/properties/ecomm_prodid",
+              "type": "null",
+              "title": "The Ecomm_prodid Schema",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "ecomm_totalvalue": {
+              "$id": "#/properties/result/properties/GAParams/properties/ecomm_totalvalue",
+              "type": "null",
+              "title": "The Ecomm_totalvalue Schema",
+              "default": null,
+              "examples": [
+                null
+              ]
+            },
+            "ecomm_pagetype": {
+              "$id": "#/properties/result/properties/GAParams/properties/ecomm_pagetype",
+              "type": "string",
+              "title": "The Ecomm_pagetype Schema",
+              "default": "",
+              "examples": [
+                "category"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "section": {
+              "$id": "#/properties/result/properties/GAParams/properties/section",
+              "type": "string",
+              "title": "The Section Schema",
+              "default": "",
+              "examples": [
+                "Women"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "subsection": {
+              "$id": "#/properties/result/properties/GAParams/properties/subsection",
+              "type": "string",
+              "title": "The Subsection Schema",
+              "default": "",
+              "examples": [
+                "Dresses"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "ecomm_pcat": {
+              "$id": "#/properties/result/properties/GAParams/properties/ecomm_pcat",
+              "type": "string",
+              "title": "The Ecomm_pcat Schema",
+              "default": "",
+              "examples": [
+                "Women > Dresses"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "ecomm_currency": {
+              "$id": "#/properties/result/properties/GAParams/properties/ecomm_currency",
+              "type": "string",
+              "title": "The Ecomm_currency Schema",
+              "default": "",
+              "examples": [
+                "USD"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "frist_source": {
+              "$id": "#/properties/result/properties/GAParams/properties/frist_source",
+              "type": "string",
+              "title": "The Frist_source Schema",
+              "default": "",
+              "examples": [
+                "direct"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "campaign": {
+              "$id": "#/properties/result/properties/GAParams/properties/campaign",
+              "type": "string",
+              "title": "The Campaign Schema",
+              "default": "",
+              "examples": [
+                "no"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "medium": {
+              "$id": "#/properties/result/properties/GAParams/properties/medium",
+              "type": "string",
+              "title": "The Medium Schema",
+              "default": "",
+              "examples": [
+                ""
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "criteo": {
+          "$id": "#/properties/result/properties/criteo",
+          "type": "object",
+          "title": "The Criteo Schema",
+          "required": [
+            "account_id",
+            "currency",
+            "country_name",
+            "email"
+          ],
+          "properties": {
+            "account_id": {
+              "$id": "#/properties/result/properties/criteo/properties/account_id",
+              "type": "string",
+              "title": "The Account_id Schema",
+              "default": "",
+              "examples": [
+                "31912"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "currency": {
+              "$id": "#/properties/result/properties/criteo/properties/currency",
+              "type": "string",
+              "title": "The Currency Schema",
+              "default": "",
+              "examples": [
+                "USD"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "country_name": {
+              "$id": "#/properties/result/properties/criteo/properties/country_name",
+              "type": "string",
+              "title": "The Country_name Schema",
+              "default": "",
+              "examples": [
+                "China"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "email": {
+              "$id": "#/properties/result/properties/criteo/properties/email",
+              "type": "string",
+              "title": "The Email Schema",
+              "default": "",
+              "examples": [
+                ""
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "NetAffiliationRetargeting": {
+          "$id": "#/properties/result/properties/NetAffiliationRetargeting",
+          "type": "string",
+          "title": "The Netaffiliationretargeting Schema",
+          "default": "",
+          "examples": [
+            ""
+          ],
+          "pattern": "^(.*)$"
+        },
+        "mainAdsRetag": {
+          "$id": "#/properties/result/properties/mainAdsRetag",
+          "type": "string",
+          "title": "The Mainadsretag Schema",
+          "default": "",
+          "examples": [
+            "\t            <script type='text/javascript'>\n                    rtgsettings ={\n\n                            'pdt_url': location.href,\n                            'pdt_category_list': '3603',\n                            'pagetype': 'category',\n                            'key': 'DIR',\n                            'token': 'newchic_us',\n                            'layer': 'iframe'\n                        };\n                    (function(d) {\n                        var s = d.createElement('script'); s.async = true;s.id='madv2014rtg';s.type='text/javascript';\n                        s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.mainadv.com/Visibility/Rtgdir2-min.js';\n                        var a = d.getElementsByTagName('script')[0]; a.parentNode.insertBefore(s, a);\n                    }(document));\n                </script>"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "code": {
+      "$id": "#/properties/code",
+      "type": "integer",
+      "title": "The Code Schema",
+      "default": 0,
+      "examples": [
+        200
+      ]
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "string",
+      "title": "The Message Schema",
+      "default": "",
+      "examples": [
+        "Success!"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}
