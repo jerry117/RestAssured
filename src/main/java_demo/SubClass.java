@@ -26,8 +26,15 @@ public class SubClass extends BaseClass {
 
 
 //        编译时类型是BaseClass,运行时类型是SubClass
+
+
+//        ploymophicBc只能调用BaseClass里的方法
         BaseClass ploymophicBc = new SubClass();
 
+
+
+//        多态只是针对方法，属性还是走的BaseClass的属性。
+//        系统总是试图访问编译时类所定义的属性，而不是运行时类所定义的属性。
         System.out.println(ploymophicBc.book);
 
         ploymophicBc.base();
