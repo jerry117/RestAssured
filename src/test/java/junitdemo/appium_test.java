@@ -21,7 +21,7 @@ public class appium_test {
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
             desiredCapabilities.setCapability("platformName", "Android");
             desiredCapabilities.setCapability("deviceName", "192.168.215.101:5555");
-            desiredCapabilities.setCapability("appPackage", "com.banggood.client");
+            desiredCapabilities.setCapability("appPackage", "com.xxxx.client");
             desiredCapabilities.setCapability("appActivity", ".module.home.MainActivity");
 
             URL remoteUrl = new URL("http://localhost:4723/wd/hub");
