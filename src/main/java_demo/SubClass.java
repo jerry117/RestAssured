@@ -54,5 +54,4 @@ public class SubClass extends BaseClass {
 
     }
 
-
 }
