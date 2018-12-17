@@ -3,3 +3,8 @@ public class ProcessArray {
         cmd.process(target);
     }
 }
+
+
+class A {
+
+}

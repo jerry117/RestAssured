@@ -7,6 +7,8 @@ public class TestFinalVariable {
     final static double d;
 
     {
+
+//        System.out.println(str);
         str = "hello";
     }
 
@@ -29,10 +31,6 @@ public class TestFinalVariable {
         System.out.println(tf.c);
         System.out.println(tf.d);
     }
-
-
-
-
 
 }
 
