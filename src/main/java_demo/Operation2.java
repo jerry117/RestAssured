@@ -27,5 +27,4 @@ public enum  Operation2 {
         System.out.println(Operation2.DIVIDE.eval(7,5));
 //        System.out.println(Operation2.KK.eval(7,5));
     }
-
 }
