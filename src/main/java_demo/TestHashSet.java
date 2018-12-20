@@ -34,6 +34,8 @@ public class TestHashSet {
         books.add(new B());
         books.add(new C());
         books.add(new C());
+//        books.add("alfj");
         System.out.println(books);
+
     }
 }
